@@ -1,0 +1,104 @@
+// layout 的樣式 CSS
+/* fnavbar */
+.navbar{
+    height: $navbarheight;
+    font-size: 20px;
+    transition: all .5s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/* footer */
+.footer {
+    &-inner {
+      max-width: 1174px;
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+  
+    &-copyright {
+      border-top: 1px solid #fff;
+  
+      &-logo {
+        margin: 30px 38px 27px 0;
+      }
+  
+      &-text {
+        max-width: 100%;
+      }
+    }
+  }
+
+/* navbar區塊平板*/
+@media(max-width: $md-width) {
+    .navbar{
+        padding: 0 48px;
+    }
+    .menu-item{
+        margin-right: 40px;
+        &:nth-last-child(1){
+            margin-right: 0px;
+        }
+    }
+ 
+}
+
+
+
+/*footer 區塊平板*/
+@media (max-width: $md-width) {
+    .footer {
+      &-inner {
+        padding: 0 48px;
+      }
+  
+      &-link {
+        padding-top: 40px;
+        margin-bottom: 26px;
+      }
+  
+      &-logo-list {
+        li {
+          max-width: 24px;
+          max-height: 24px;
+          margin-right: 0px;
+          margin-left: 24px;
+        }
+      }
+  
+      &-contact {
+        padding-bottom: 27px;
+  
+        .icon-phone {
+          margin-right: 12px;
+          max-width: 23px;
+          max-height: 23px;
+  
+        }
+  
+        .icon-email {
+          margin-right: 8px;
+          max-width: 32px;
+          max-height: 32px;
+  
+        }
+      }
+  
+      &-copyright {
+        &-logo {
+          display: none;
+        }
+  
+        &-text a:first-child {
+          margin-right: 24px;
+        }
+      }
+  
+  
+    }
+  
+  }

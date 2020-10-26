@@ -1,0 +1,29 @@
+
+// @mixin  media-breakpoint-md {
+//     @media screen and (max-width: $md-width) {
+//       @content;
+//     }
+//   }
+//   @mixin  media-breakpoint-sm {
+//     @media screen and (max-width: $sm-width) {
+//       @content;
+//     }
+//   }
+
+  @mixin pad {
+   @media screen and (max-width: $md-width) {
+      @content;
+    }
+  }
+  @mixin pad-1px {
+    @media screen and (max-width: $md-width - 1) {
+       @content;
+     }
+   }
+  
+  
+  @mixin mobile {
+    @media screen and (max-width: $sm-width) {
+      @content;
+    }
+  }

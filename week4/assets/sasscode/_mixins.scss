@@ -1,0 +1,18 @@
+/* 組合語法 用 @include 語法名稱 來引用 */
+
+
+//h1圖片替代文字
+@mixin hide-text {
+    text-indent: 110%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin bg-cover($background-url) {
+    background-image: url($background-url) ;
+    /*圖片位置至中 x y*/
+    background-position: center center;
+    /*容器過大時背景不重複*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}

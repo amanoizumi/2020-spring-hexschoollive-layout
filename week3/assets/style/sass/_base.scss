@@ -1,0 +1,141 @@
+
+//** Base **//
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+h1 {
+  font-size: $font-size * 4; //64px
+}
+
+h2 {
+  font-size: $font-size * 3; //48px
+}
+
+h3 {
+  font-size: $font-size * 2.25; //36px
+}
+
+h4 {
+  font-size: $font-size * 1.5; //24px
+}
+
+a {
+  text-decoration: none;
+  color: $font-color-light;
+}
+
+/* container */
+/* 容器寬度 = 內容寬度+欄位總間距*/
+.container{ 
+  max-width:1224px;
+  padding: 0 12px;
+  margin: 0 auto;
+  /* 擁有主容器滿寬，且在高於此寬度時向外延伸 */
+
+}
+.bg-cover {
+  /*圖片位置至中 x y*/
+  background-position: center center;
+  /*容器過大時背景不重複*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+/* font */
+.italic {
+  font-style: italic;
+}
+.font-weight-bold{
+  font-weight: 700;
+}
+
+
+.m-0-a {
+  margin: 0 auto ;
+}
+
+
+
+/* text align */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/* display */
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-sb {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-end{
+  align-items: flex-end;
+}

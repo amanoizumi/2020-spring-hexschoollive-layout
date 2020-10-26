@@ -1,0 +1,117 @@
+.faq-header {
+    @include bg-cover("../images/72@2x.png");
+    margin-top: 108px;
+
+    @include mobile {
+        @include bg-cover("../images/72.png");
+        margin-top: 49px;
+    }
+
+    &-inner {
+        height: 304px;
+        align-items: flex-end;
+
+        @include mobile {
+            height: 143px;
+        }
+    }
+
+    h1 {
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+
+    .q-icon {
+        margin-left: 10px;
+
+        @include pad {
+            max-width: 48px;
+            margin-left: 16px;
+            margin-bottom: 9px;
+        }
+
+        @include mobile {
+            max-width: 24px;
+            margin-left: 8px;
+            margin-bottom: 8px;
+        }
+    }
+
+}
+
+.faq-content {
+    padding-top: 88px;
+    padding-bottom: 156px;
+
+    @include pad {
+        padding-top: 40px;
+        padding-bottom: 104px;
+    }
+
+    @include mobile {
+        padding-top: 16px;
+        padding-bottom: 56px;
+    }
+
+    &-title {
+        font-size: 32px;
+
+        @include pad {
+            margin-bottom: 32px;
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+.faq {
+    &-card {
+        &_item {
+            border: 1px solid #000;
+            border-bottom: 0;
+
+            &:last-child {
+                border-bottom: 1px solid #000;
+            }
+
+            .checkbox {
+                position: absolute;
+                width: 1%;
+                opacity: 0;
+
+            }
+
+            //利用 check box 的開關做選單收闔動作
+
+            .label {
+                padding: 0 38px;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0;
+                cursor: pointer; //游標變手掌
+
+                @include mobile {
+                    padding: 0 8px 0 16px;
+                }
+            }
+
+        }
+    }
+}
+
+.question {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 600;
+    margin: 22px 0;
+
+    @include mobile {
+        font-size: 16px;
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,763 @@
+/* 菜鳥 code 好醜好怕助教累死*/
+
+
+/*--- background ---*/
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-lighter {
+  background-color: $background-color;
+}
+
+/*--- font-color ---*/
+
+.font-color-primary {
+  color: $primary;
+}
+
+.font-color-dark {
+  color: $font-color-dark;
+}
+
+.font-color-light {
+  color: $font-color-light;
+}
+
+.font-color-gray {
+  color: $font-color-gray;
+}
+
+
+/*--- 平板 base ---*/
+
+@media (max-width: $md-width) {
+
+  h1 {
+    font-size: $font-size * 3; //64->48px
+  }
+
+  h2 {
+    font-size: $font-size * 2; //48->32px
+  }
+
+  h3 {
+    font-size: $font-size * 1.25; //36->20px
+  }
+
+  h4 {
+    font-size: $font-size * 1.25;
+  }
+
+}
+
+@media (max-width: $md-width - 1) {
+
+  h1 {
+    font-size: $font-size * 3; //64->48px
+  }
+
+  h2 {
+    font-size: $font-size * 2; //48->32px
+  }
+
+  h3 {
+    font-size: $font-size * 1.25; //36->20px
+  }
+
+  h4 {
+    font-size: $font-size * 1.25;
+  }
+
+
+}
+
+/*--- 手機 base ---*/
+
+@media (max-width: $sm-width) {
+
+  h1 {
+    font-size: $font-size * 2; //32px
+  }
+
+  h2 {
+    font-size: $font-size * 1.5; //24px
+  }
+
+  h3 {
+    font-size: $font-size * 1;
+  }
+
+  h4 {
+    font-size: $font-size * 1.25;
+  }
+
+}
+
+/*---早春區塊---*/
+.header {
+  @include bg-cover("../images/banner.png");
+
+  margin-top: 108px;
+
+  @include mobile {
+    margin-top: 49px;
+  }
+
+  &-inner {
+    height: 840px;
+  }
+
+
+
+  @include pad {
+    @include bg-cover("../images/banner-sm.png");
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+}
+
+/*---專業區塊---*/
+.card {
+  padding: 0px 37px;
+  max-width: 25%;
+
+  @include pad {
+    padding: 20px 50px 0px 50px;
+    max-width: 48.2142%;
+
+    @include pad-1px {
+      max-width: 50%;
+      margin: 0;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      padding: 20px 64px 8px 64px;
+    }
+
+
+
+    margin-bottom: 12px;
+
+
+
+    &:nth-child(1) {
+      //進入平板模式後更換順序
+      order: 3;
+
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+      margin: 0; //愛心卡圖取消 margin
+    }
+
+    &:nth-child(4) {
+      order: 4;
+
+    }
+
+  }
+
+  &-group {
+    align-items: baseline; //若子元素不等高，則依照基準線對齊
+
+    @include pad {
+      flex-wrap: wrap;
+    }
+
+    @include pad-1px {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.introduction {
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  @include mobile {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  &-title {
+    margin-bottom: 44px;
+
+    @include pad {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-text {
+    margin-top: 4px;
+  }
+
+}
+
+.iconfram {
+  margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
+}
+
+
+
+
+/*--- 經典區塊 ---*/
+.classic {
+
+  .container {
+    @include pad {
+      padding-right: 0;
+      //進入平板寬度時，容器右方不 padding
+    }
+
+    @include mobile {
+      padding: 0 12px 0 11px;
+      //進入平板寬度時，容器右方不 padding
+    }
+
+  }
+
+  &-title {
+    @include pad {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+
+  }
+
+  &-list {
+
+    &-items {
+      @include pad {
+        margin-bottom: 8px;
+        flex-direction: row;
+        //進入平板寬度時，取消所有反轉的項目
+      }
+    }
+  }
+
+  &-photo {
+    width: 66%;
+
+    @include pad {
+      width: 57%;
+    }
+
+    @include mobile {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &-text {
+    width: 34%;
+
+    @include pad {
+      width: 43%;
+      margin: 0; //進入平板寬度時，取消文字原本的 margin
+      justify-content: center;
+    }
+
+    @include mobile {
+      position: absolute;
+      color: $font-color-light;
+      margin-left: 25%;
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      @media (max-width:1100px) {
+        font-size: 32px;
+
+      }
+
+    }
+
+  }
+
+  &-logo {
+
+    @media (max-width:1100px) {
+      max-width: 32px;
+    }
+
+    @include mobile {
+      display: none;
+
+      &-white {
+        display: block;
+      }
+    }
+
+  }
+
+  @include pad {
+    padding-top: 40px;
+    margin-bottom: 40px;
+
+    &-logo {
+      max-width: 32px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 24px;
+    margin-bottom: 24px;
+
+  }
+}
+
+
+
+
+
+/*--- 聯名區塊 ---*/
+.cobrand {
+  @include bg-cover("../images/bg.png");
+  padding-bottom: 479px;
+
+  @include pad {
+    padding-bottom: 417px;
+
+    .mr-1 {
+      margin-right: 3px;
+    }
+
+    .mb-1 {
+      margin-bottom: 3px;
+    }
+
+  }
+
+  @include mobile {
+    padding-bottom: 189px;
+
+    .mr-1 {
+      margin-right: 2px;
+    }
+
+    .mb-1 {
+      margin-bottom: 2px;
+    }
+
+  }
+
+
+
+  &-title {
+    @include pad {
+      padding-top: 40px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      padding-top: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-gallery {
+    position: relative;
+    padding: 0 10%;
+    margin: 0px auto 60px auto;
+
+    .area-one {
+      max-width: 37.426%;
+    }
+
+    .area-two {
+      max-width: 62.573%;
+    }
+
+    @include mobile {
+      padding: 0 6.4%;
+      margin-bottom: 20px;
+
+      .area-one {
+        max-width: 48%;
+      }
+
+      .area-two {
+        max-width: 52%;
+      }
+
+      .area-three {
+        flex-direction: column;
+      }
+
+      .glasses-man {
+        order: 2;
+        max-width: 21%;
+      }
+
+      .glasses-woman {
+        order: 1;
+        margin-bottom: 2px;
+
+      }
+    }
+
+  }
+}
+
+.more {
+  &-area {
+    @include bg-cover("../images/more.png");
+    min-width: 16.82%;
+    min-height: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+
+    @include pad {
+      left: 65%;
+
+    }
+
+    @include mobile {
+      left: 58%;
+      bottom: 13%;
+      min-width: 31.2%;
+      min-height: 23.45%;
+    }
+
+  }
+
+  &-text {
+    position: absolute;
+    font-size: 72px;
+    background: #ffffff;
+    padding: 5px 84px 5px 25px;
+    top: 25px;
+    left: 15px;
+    align-items: center;
+
+    @include pad {
+      padding: 5px 40px 5px 25px;
+      top: 5px;
+    }
+
+    img {
+      margin-left: 17px;
+
+      @include pad {
+        max-width: 27px;
+        max-height: 27px;
+      }
+
+      @include mobile {
+        max-width: 18px;
+        max-height: 18px;
+        margin-left: 8px;
+      }
+    }
+
+    @media (max-width:1420px) {
+      // more超無腦寫法QQ
+
+      font-size: 50px;
+    }
+
+    @media (max-width:1200px) {
+      font-size: 30px;
+      padding: 0 30px 0 20px;
+
+      img {
+        max-width: 27px;
+        max-height: 27px;
+      }
+
+    }
+
+    @media (max-width:900px) {
+
+      padding: 0 20px 0 15px;
+
+    }
+
+    @include mobile {
+      font-size: 26px;
+      padding: 4px 20px 4px 12px;
+
+    }
+
+  }
+}
+
+.cobrand-gallery-second {
+  p {
+    z-index: 100;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.double-a {
+  @include bg-cover("../images/product-8.png");
+  margin-right: 30px;
+
+  @include pad {
+    margin-right: 24px;
+  }
+
+  @include mobile {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.youth {
+  @include bg-cover("../images/product-9.png");
+}
+
+.double-a,
+.youth {
+  position: relative;
+  color: $primary;
+  font-size: 72px;
+  min-width: 48.21%;
+  min-height: 598px;
+
+  @include pad {
+    min-height: 280px;
+    font-size: 32px;
+
+  }
+
+}
+
+.mask {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+/*--- 顧客推薦區塊 ---*/
+.recommend {
+  margin-top: -335px;
+
+  @include pad {
+    margin-top: -377px;
+
+    h2 {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include mobile {
+    margin-top: -165px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+
+
+
+  &-text {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    background: #fff;
+  }
+
+  &-list {
+    @include pad {
+      margin-bottom: 40px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+
+    }
+
+    &-items {
+      max-width: 25%;
+
+      @include pad {
+        max-width: 48%;
+        margin-bottom: 24px;
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+      }
+
+      @include pad-1px {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+          margin-right: 0;
+        }
+
+      }
+
+      @include mobile {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+          margin-right: 0;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+/*--- 連絡我們區塊 ---*/
+.contact {
+  @include pad {
+    padding-top: 40px;
+  }
+
+  @include mobile {
+    padding-top: 24px;
+  }
+
+  &-title {
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &-content {
+    max-width: 816px;
+    margin: 0 auto;
+    padding: 0 12px;
+
+    @include pad {
+      padding: 0 24px;
+    }
+
+    &-text {
+      font-size: 20px;
+
+      @include pad {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+
+  }
+
+  @include pad {
+    .checkbox-area {
+      display: flex;
+    }
+
+    .input-group {
+      font-size: 16px;
+    }
+  }
+
+}
+
+input[type=text] {
+  border: 1px solid #000000;
+  padding: 14px 16px;
+  background: #ffffff00;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.2);
+
+  @include mobile {
+    padding: 7px 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 14px 16px;
+  background: #ffffff00;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family;
+  resize: none;
+}
+
+.form-text::placeholder,
+.form-textarea::placeholder {
+  color: #c3baba;
+}
+
+.btn-area {
+  margin-top: 42px;
+  padding-bottom: 92px;
+
+  @include pad {
+    margin-top: 31px;
+    padding-bottom: 56px;
+
+  }
+
+  @include mobile {
+    margin-top: 27px;
+    padding-bottom: 48px;
+
+  }
+}
+
+.btn-primary {
+  outline: none;
+  color: $font-color-light;
+  background: $primary;
+  padding: 16px 58px;
+
+  &:hover {
+    background: $primary-darken;
+  }
+
+  @include pad {
+    padding: 7px 36px;
+  }
+}

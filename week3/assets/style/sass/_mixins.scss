@@ -1,0 +1,10 @@
+/* 組合語法 用 @include 語法名稱 來引用 */
+
+
+//h1圖片替代文字
+@mixin hide-text {
+    text-indent: 110%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+

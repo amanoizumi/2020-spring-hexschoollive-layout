@@ -1,0 +1,27 @@
+/* container */
+/* 容器寬度 = 內容寬度+欄位總間距*/
+.container {
+    max-width: 1224px;
+    padding: 0 12px;
+    margin: 0 auto;
+
+    /* 擁有主容器滿寬，且在高於此寬度時向外延伸 */
+    @include pad {
+        max-width: 768px;
+        padding: 0 48px;
+        margin: 0 auto;
+    }
+
+    @include pad-1px {
+        max-width: 767px;
+        padding: 0 48px;
+        margin: 0 auto;
+    }
+
+    @include mobile {
+        max-width: 375px;
+        padding: 0 12px 0 11px;
+        margin: 0 auto;
+    }
+
+}

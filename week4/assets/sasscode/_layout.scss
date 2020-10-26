@@ -1,0 +1,244 @@
+// layout 的樣式 CSS
+/* navbar */
+.navbar {
+  font-size: 20px;
+  transition: all .5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  @include pad {
+    padding: 0 30px;
+    justify-content: initial;
+
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .logo{
+      padding: 30px 0;
+      @include mobile {
+        padding: 10px 0;
+        max-width: 48px;
+      }
+
+    }
+
+  }
+
+  @include mobile {
+    padding: 0 10px;
+  }
+
+}
+
+
+.menu {
+  @include pad {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0px;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 120;
+
+    li a {
+      display: block;
+      background: #AA0601;
+      color: #FFFFFF;
+      border-top: 1px solid #FFFFFF;
+      padding: 16px 0;
+      text-decoration: none;
+
+      &:hover {
+        background: #8f0400;
+      }
+    }
+  }
+
+  &-item {
+    @include pad {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+}
+
+.active {
+  max-height: 300px;
+}
+
+.ham-icon {
+  display: none;
+
+  @include pad {
+    display: block;
+  }
+}
+
+
+
+
+/* footer */
+.footer {
+  &-inner {
+    max-width: 1174px;
+    padding: 0 12px;
+    margin: 0 auto;
+
+    @include pad {
+      padding: 0 48px;
+    }
+
+    @include mobile {
+      padding: 0 14px;
+    }
+
+    .footer-top {
+      @include mobile {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 24px;
+      }
+    }
+  }
+
+
+  &-logo-list {
+    @include pad {
+      li {
+        max-width: 24px;
+        max-height: 24px;
+        margin-right: 0px;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &-link {
+    @include pad {
+      padding-top: 40px;
+      margin-bottom: 26px;
+    }
+
+    @include mobile {
+      padding-top: 0;
+      margin-bottom: 0;
+      align-items: initial;
+    }
+  }
+
+  &-copyright {
+    border-top: 1px solid #fff;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: initial;
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    &-logo {
+      padding: 24px 0;
+      margin-right: 38px;
+
+      @include pad {
+        display: none;
+      }
+
+      @include mobile {
+        display: block;
+        position: absolute;
+        margin: 0 0 20px 0;
+        padding: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 46px;
+      }
+    }
+
+    &-en {
+      @include mobile {
+        margin: 16px 0 8px 0;
+      }
+    }
+
+
+    &-text {
+      max-width: 100%;
+
+      @include pad {
+        & a:first-child {
+          margin-right: 24px;
+        }
+
+      }
+
+      @include mobile {
+        flex-direction: column;
+
+        & a:first-child {
+          margin-right: 0px;
+          margin-bottom: 8px;
+        }
+
+      }
+    }
+
+  }
+
+  &-contact {
+    @include pad {
+      padding-bottom: 27px;
+
+      @include mobile {
+        padding-bottom: 24px;
+      }
+
+      .icon-phone {
+        margin-right: 12px;
+        max-width: 23px;
+        max-height: 23px;
+
+        @include mobile {
+          margin-right: 8px;
+          max-width: 13px;
+          max-height: 13px;
+        }
+
+      }
+
+      .icon-email {
+        margin-right: 8px;
+        max-width: 32px;
+        max-height: 32px;
+
+        @include mobile {
+          margin-right: 5px;
+          max-width: 20px;
+          max-height: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+@include pad-1px {
+  .footer {
+    &-menu {
+      display: none;
+    }
+
+    &-logo-list li:first-child {
+      margin-left: 0;
+    }
+  }
+}

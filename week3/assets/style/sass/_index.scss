@@ -1,0 +1,445 @@
+/*--- background ---*/
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-lighter {
+  background-color: $background-color;
+}
+
+/*--- font-color ---*/
+
+.font-color-primary {
+  color: $primary;
+}
+
+.font-color-dark {
+  color: $font-color-dark;
+}
+
+.font-color-light {
+  color: $font-color-light;
+}
+
+.font-color-gray {
+  color: $font-color-gray;
+}
+
+
+/*--- 平板 base ---*/
+
+@media (max-width: $md-width) {
+
+  h1 {
+    font-size: $font-size * 3; //64->48px
+  }
+
+  h2 {
+    font-size: $font-size * 2; //48->32px
+  }
+
+  h3 {
+    font-size: $font-size * 1.25; //36->20px
+  }
+
+  h4 {
+    font-size: $font-size * 1.25;
+  }
+
+  .container {
+    max-width: 768px;
+    padding: 0 48px;
+    margin: 0 auto;
+  }
+}
+
+
+/*---早春區塊---*/
+.header {
+  margin-top: 108px;
+
+  &-inner {
+    height: 840px;
+  }
+
+  background-image: url(../../images/banner.png);
+
+  @include pad {
+    background-image: url(../../images/banner-sm.png);
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+}
+
+/*---專業區塊---*/
+.card {
+  padding: 0px 37px;
+
+  @include pad {
+    padding: 0px 50px;
+  }
+
+  max-width: 282px;
+  min-height: 289px;
+
+  @include pad {
+    max-width: 324px;
+    min-height: 256px;
+  }
+
+  @include pad {
+    &-group {
+      flex-wrap: wrap;
+    }
+
+    margin-bottom: 12px;
+
+    &:nth-child(1) {
+      order: 3;
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+    }
+  }
+}
+
+.introduction {
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 48px;
+
+
+    img {
+      max-width: 80px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 44px;
+  }
+
+  @include pad {
+    h2 {
+      margin-bottom: 12px;
+    }
+
+  }
+
+  &-text {
+    margin-top: 4px;
+  }
+
+}
+
+.iconfram {
+  //icon 在 100 X 100 的框內統一置中
+  display: flex;
+  min-width: 100px;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @include pad {
+    //icon 在 116 * 116的框內統一置中
+    min-width: 116px;
+    min-height: 116px;
+    margin: 0;
+  }
+
+}
+
+/*--- 經典區塊 ---*/
+@media (max-width:1100px) {
+  .classic {
+    display: flex;
+    flex-direction: column;
+
+    .container h2 {
+      font-size: 24px;
+    }
+
+    &-list-item-photo {
+      flex-basis: 60%;
+      width: 411px;
+    }
+
+    @include pad {
+      padding-top: 40px;
+      margin: 0 0 40px 0;
+
+      .container {
+        margin: 0;
+      }
+
+      &-title {
+        margin-bottom: 32px;
+      }
+
+      &-logo {
+        max-width: 32px;
+      }
+
+      &-list-item {
+        display: block;
+        margin-bottom: 8px;
+
+        ul {
+          flex-direction: row;
+
+          >li:first-child {
+            margin-left: 0;
+            margin-right: 0;
+
+          }
+
+          >li:nth-child(2) {
+            margin: 0 auto;
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+
+
+/*--- 聯名區塊 ---*/
+.cobrand {
+  background-image: url(../../images/bg.png);
+  padding-bottom: 479px;
+
+  &-gallery {
+    max-width: 1539px;
+    margin: 0px auto 60px auto;
+
+    @include pad {
+      max-width: 672px;
+      margin-bottom: 40px;
+
+      h2 {
+        padding-top: 40px;
+        margin-bottom: 32px;
+      }
+
+      .mb-1 {
+        margin-bottom: 3px;
+      }
+
+      .mr-1 {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.more {
+  &-area {
+    position: relative;
+  }
+
+  &-banner {
+    margin-right: 82px;
+
+    @media (max-width:1100px) {
+      max-width: 150px;
+    }
+  }
+}
+
+.btn-text {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  font-size: 72px;
+  background-color: #fff;
+  padding-left: 32px;
+  padding-right: 19px;
+
+  @media (max-width:1100px) {
+    font-size: 30px;
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+}
+
+
+
+.double-a {
+  background-image: url(../../images/product-8.png);
+}
+
+.youth {
+  background-image: url(../../images/product-9.png);
+}
+
+.double-a,
+.youth {
+  display: block;
+  color: $primary;
+  font-size: 72px;
+  width: 585px;
+  height: 592px;
+
+  @include pad {
+    max-width: 322px;
+    max-height: 280px;
+    font-size: 32px;
+
+  }
+}
+
+.mask {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+
+}
+
+
+/*--- 顧客推薦區塊 ---*/
+.recommend {
+  margin-top: -335px;
+
+  @include pad {
+    margin-top: -377px;
+
+    h2 {
+      margin-bottom: 32px;
+    }
+  }
+
+
+
+  &-text {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    background: #fff;
+  }
+
+  &-list {
+    @include pad {
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+    }
+
+    &-items {
+      max-width: 282px;
+
+      @include pad {
+
+        max-width: 324px;
+        margin-right: 0;
+        margin-bottom: 24px;
+
+      }
+    }
+  }
+}
+
+
+/*--- 連絡我們區塊 ---*/
+.contact {
+
+  &-content {
+    max-width: 792px;
+    margin: 0 auto;
+
+    @include pad {
+      max-width: 496px;
+      margin: 0 auto;
+    }
+
+    &-text {
+      font-size: 20px;
+
+      @include pad {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+  }
+
+  @include pad {
+    padding-top: 40px;
+
+    .checkbox-area {
+      display: flex;
+    }
+
+    .input-group {
+      font-size: 16px;
+    }
+  }
+
+}
+
+input[type=text] {
+  border: 1px solid #000000;
+  padding: 14px 16px;
+  background: #ffffff00;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.2)
+}
+
+.form-textarea {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 14px 16px;
+  background: #ffffff00;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-family;
+  resize: none;
+}
+
+.form-text::placeholder,
+.form-textarea::placeholder {
+  color: #c3baba;
+}
+
+.btn-area {
+  margin-top: 42px;
+  padding-bottom: 92px;
+
+  @include pad {
+    margin-top: 31px;
+    padding-bottom: 56px;
+
+  }
+}
+
+.btn-primary {
+  outline: none;
+  color: $font-color-light;
+  background: $primary;
+  padding: 16px 58px;
+
+  @include pad {
+    padding: 7px 36px;
+  }
+}

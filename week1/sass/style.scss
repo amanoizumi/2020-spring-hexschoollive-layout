@@ -1,0 +1,208 @@
+/* base */
+body{
+    font-family: "Microsoft JhengHei";
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    }
+*, *::before,*::after{
+    box-sizing: border-box;
+    }
+
+
+/* color */
+.ft-color{
+    &--red   {color: #a00404;}
+    &--white {color: #ffffff;}
+}
+.bg-color{
+    &--lightgray {background: #96a9c4;}
+    &--darkgray  {background: #415165;}
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.name {
+    font-size: 80px;
+    line-height: 90px;
+}
+.title {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+    &-subtitle {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        padding-left: 16px;
+    }
+}
+.content{
+    padding: 0 48px;
+}
+.content-text ,.skills-list, .workItem{
+    font-size: 24px;
+    line-height: 36px;
+    &--bord{
+        font-weight: 700;
+    }
+}
+
+/* element */
+.underline{
+    &--1 {border-bottom: 1px solid black;
+        &--white{
+            border-bottom: 1px solid #fff;
+        }
+    }
+    &--2 {border-bottom: 2px solid black;
+        &--white{
+            border-bottom: 2px solid #fff;
+        }
+    }
+}
+
+.timeline-dot {
+    position: relative;
+}
+.timeline-dot::before {
+    position: absolute;/* 讓偽元素絕對定位 */
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #96A9C4;
+    border-radius: 50%; /*圓形*/
+    top: 6px;
+    left: -32px;
+}
+.timeline-line:after {
+    position: absolute;
+    content: "";
+    border-left: 1px solid #96A9C4;
+    top: 20px;
+    bottom: -40px;
+    left: -24px;
+}
+.skills{
+    display: flex;
+}
+.banner{
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 65px;
+}
+.skills-content{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 95%; /* Three values: flex-grow | flex-shrink | flex-basis */
+    max-width: 1200px;
+	background-color: #415165;
+    padding: 24px 102px 56px;
+    color: white;
+    text-align: center;
+
+}
+
+.skill-list {
+	width: 230px;
+	padding-left: 23px;
+	border-left: 1px solid #96A9C4;
+    margin: 0 auto; 
+}
+.skill-list-item {
+	font-size: 24px;
+	font-weight: lighter;
+	line-height: 36px;
+    margin-bottom: 16px;
+    text-align: left;
+    &--mb0 {
+     margin: 0;
+    }
+}
+.workExperience-list {
+    padding: 0 48px 0 48px;
+    position: relative;
+}
+.workExperience-list::before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid #96A9C4;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+}
+.work-detail{
+    width: 642px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.footer{
+    color:white;
+    text-align: center;
+    padding: 24px 0 48px 0;
+}
+
+.contact-list-items{
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    
+}
+.contact-list-icon{
+    display: flex;
+    justify-content: center;
+    margin: 0 12px 0 12px;    
+}
+
+.mt-48{
+    margin-top: 48px;
+}
+.mr-16{
+    margin-right: 16px;
+}
+.mr-24{
+    margin-right: 24px;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+.mb-22{
+    margin-bottom: 22px;
+}
+.mb-24{
+    margin-bottom: 24px;
+}
+.mb-32{
+    margin-bottom: 32px;
+}
+.mb-40{
+    margin-bottom: 40px;    
+}
+.mb-48{
+    margin-bottom: 48px;
+}
+.mb-72{
+    margin-bottom: 72px;
+}
+.pt-8{
+    padding-top: 8px;}
+.pb-8{
+    padding-bottom: 8px;
+}
+.pb-24{
+    padding-bottom: 24px;
+}
+.pt-48{
+    padding-top:48px;
+}
